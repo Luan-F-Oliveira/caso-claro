@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caso Claro · Protótipo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+<header class="top"><div><b class="logo">Caso Claro</b><span class="sub">Protótipo do Desafio de Inovação YouShop 2027</span></div>
+<span class="tag" title="Nada aqui é resultado real da YouShop">Dados fictícios · IA simulada</span></header>
+<nav class="tabs" role="tablist" aria-label="Seções">
+<button role="tab" data-tab="novo" aria-selected="true">Novo relato</button>
+<button role="tab" data-tab="fila" aria-selected="false">Fila de casos <span id="cnt" class="cnt">3</span></button>
+<button role="tab" data-tab="como" aria-selected="false">Como funciona</button></nav>
+<main>
+<section id="novo" class="panel" role="tabpanel">
+<h1>Conte o problema do seu jeito</h1>
+<p class="lead">Escreva como falaria no WhatsApp. O Caso Claro pergunta o que falta e monta o caso para o time.</p>
+<label for="relato">Seu relato</label>
+<textarea id="relato" rows="4" placeholder="Ex.: minha venda não apareceu"></textarea>
+<div class="row"><button id="ex" class="ghost">Usar exemplo</button><button id="analisar" class="primary">Analisar relato</button></div>
+<div id="status" aria-live="polite"></div>
+<form id="perg" hidden></form>
+<div id="caso" hidden></div>
+</section>
+<section id="fila" class="panel" role="tabpanel" hidden>
+<h1>Fila de casos</h1>
+<div class="row"><input id="busca" type="search" placeholder="Buscar caso" aria-label="Buscar caso">
+<select id="filtro" aria-label="Filtrar por status"><option value="">Todos os status</option><option>Aguardando QA</option><option>Em análise</option><option>Resolvido</option></select></div>
+<ul id="lista" class="lista"></ul></section>
+<section id="como" class="panel" role="tabpanel" hidden>
+<h1>Como funciona, sem caixa-preta</h1>
+<div class="cols">
+<div class="card"><h3>Regras (sem IA)</h3><p>Escolhem a categoria, checam os campos obrigatórios, calculam a completude e mascaram e-mail, CPF e telefone.</p></div>
+<div class="card"><h3>IA (simulada aqui)</h3><p>Em produção, um modelo de linguagem faria a pergunta certa, resumiria o relato e redigiria o caso e a resposta. Neste protótipo, esses textos vêm de modelos fixos.</p></div>
+<div class="card"><h3>Pessoa</h3><p>Sempre valida antes de o caso entrar na fila. Se os dados não explicam o problema, o sistema diz que não sabe.</p></div></div>
+<h2>Limites deste protótipo</h2>
+<ul class="plain"><li>Não se conecta à YouShop nem a nenhum sistema real.</li><li>As hipóteses de causa são pontos a verificar, não conclusões.</li><li>Nada aqui mede resultado real; os casos da fila são exemplos inventados.</li></ul>
+</section></main>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script></body></html>

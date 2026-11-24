@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caso Claro · Luan Oliveira · YouShop 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+@page{size:13.333in 7.5in;margin:0}
+*{box-sizing:border-box;margin:0}
+body{background:#d9e0d3;font-family:Montserrat,system-ui,sans-serif;color:#0F274A;counter-reset:s;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.slide{container-type:inline-size;width:min(96vw,1200px);aspect-ratio:16/9;margin:18px auto;background:#F4F7F0;padding:4.5% 6%;position:relative;overflow:hidden;counter-increment:s}
+.slide::after{content:"Caso Claro  |  " counter(s) " / 11";position:absolute;left:6%;bottom:3.5%;font-size:1.05cqw;color:#4a5d78}
+.dark{background:#0F274A;color:#fff}.dark::after{color:#b9c6da}
+.in{height:100%;display:flex;flex-direction:column;justify-content:center;gap:1.5cqw;padding-bottom:2cqw}
+h1{font-size:6cqw;line-height:1;font-weight:800}h2{font-size:3cqw;line-height:1.12;font-weight:800;max-width:30ch}
+p,li{font-size:1.55cqw;line-height:1.45}ul{padding-left:1.8cqw;display:flex;flex-direction:column;gap:.7cqw}
+.big{font-size:2.3cqw;font-weight:700;line-height:1.3;max-width:34ch}.lime{color:#A3F012}.note{font-size:1.2cqw;color:#4a5d78}.dark .note{color:#b9c6da}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4cqw}.cols.c2{grid-template-columns:1fr 1fr}.cols.c4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border-radius:1cqw;padding:1.5cqw;border-top:.5cqw solid #A3F012}.dark .card{background:#17335b}
+.card b{display:block;font-size:1.6cqw;margin-bottom:.5cqw}.card p,.card li{font-size:1.35cqw}
+.flow{display:flex;gap:1.2cqw}.flow>div{flex:1;background:#fff;border-radius:1cqw;padding:1.3cqw;position:relative;border-bottom:.45cqw solid #A3F012}
+.flow>div:not(:last-child)::after{content:"›";position:absolute;right:-1.1cqw;top:50%;transform:translateY(-50%);font-size:2.2cqw;font-weight:800}
+.flow b{display:block;font-size:1.5cqw;margin-bottom:.4cqw}.flow p{font-size:1.25cqw}
+.bad{border-top-color:#c44}.mono{font-family:ui-monospace,Menlo,monospace;font-size:1.25cqw}
+@media print{body{background:#fff}.slide{width:13.333in;height:7.5in;aspect-ratio:auto;margin:0;break-after:page;page-break-after:always}}
+</style></head><body>
+
+<section class="slide dark"><div class="in">
+<h1>Caso Claro</h1>
+<p class="big lime">Transforma “não funciona” em um caso que o time consegue resolver.</p>
+<p>Oi, eu sou o <b>Luan Figueiredo de Oliveira</b>. Estudo Análise e Desenvolvimento de Sistemas na Universidade de Vassouras (2026–2028).</p>
+<p>Hoje ensino lógica de programação no ensino fundamental e auxiliar administrativo. Antes, trabalhei no atendimento ao cliente da FIBRAMAR Telecomunicações.</p>
+<p>O que trago para a YouShop: o hábito de descobrir o que a pessoa realmente quer dizer quando fala “está ruim”.</p>
+<p class="note">Protótipo navegável: [LINK DO GITHUB PAGES] · dados fictícios</p></div></section>
+
+<section class="slide"><div class="in">
+<h2>O relato chega vago e o time precisa adivinhar</h2>
+<div class="cols c4">
+<div class="card"><b>Creator</b><p>“Minha venda não apareceu.” Espera sem saber o que falta.</p></div>
+<div class="card"><b>Atendimento ao creator</b><p>Refaz as perguntas básicas: canal, aparelho, horário.</p></div>
+<div class="card"><b>QA</b><p>Precisa reproduzir falhas que muitas vezes chegam relatadas de forma vaga.</p></div>
+<div class="card"><b>Desenvolvimento</b><p>Investiga incidentes sob pressão de tempo, com pouco contexto.</p></div></div>
+<p class="note">Fonte: descrição das áreas no próprio desafio. A frequência real desse problema é uma hipótese a validar.</p></div></section>
+
+<section class="slide"><div class="in">
+<h2>Já fiz esse trabalho: descobrir o que “ruim” significa</h2>
+<div class="cols">
+<div class="card"><b>Atendimento (FIBRAMAR)</b><p>O cliente dizia “a internet está ruim”. Eu investigava: ruim como? Em quais situações? Detalhava com ele até resolver ou abrir um chamado técnico.</p></div>
+<div class="card"><b>Ensino</b><p>Ensino lógica a crianças. Aprendi que a pergunta certa ensina mais do que a resposta pronta.</p></div>
+<div class="card"><b>Administrativo</b><p>Registro, protocolo e planilhas: sei o que torna um registro útil para quem vem depois.</p></div></div>
+<p class="note">Sou estudante (Python intermediário, SQL básico, Git/GitHub). Meu valor aqui é o olhar de quem já esteve do outro lado do atendimento.</p></div></section>
+
+<section class="slide"><div class="in">
+<h2>Como cheguei até aqui</h2>
+<ul><li><b>Experiência própria:</b> anos transformando relatos vagos em diagnósticos.</li>
+<li><b>O desafio:</b> as descrições de QA, Atendimento ao creator e Produto apontam o mesmo atrito.</li>
+<li><b>Pesquisa pública:</b> a YouShop declara tracking nativo e suporte a creators por WhatsApp. Navegadores de apps e o Safari limitam cookies, o que gera relatos do tipo “a venda sumiu”.</li></ul>
+<p class="note">Não entrevistei ninguém da YouShop e não tenho dados internos. O que preciso validar: quantos casos chegam incompletos.</p></div></section>
+
+<section class="slide"><div class="in">
+<h2>O que se perde quando o relato chega incompleto</h2>
+<div class="flow"><div><b>Hoje</b><p>Relato → pergunta → resposta → outra pergunta → … → caso</p></div><div><b>Tempo</b><p>Idas e voltas antes de qualquer ação</p></div><div><b>Capacidade</b><p>QA e Dev gastam horas só para entender</p></div><div><b>Confiança</b><p>O creator espera sem saber o que está acontecendo</p></div></div>
+<p class="note">Hipótese: sem dados internos, não quantifico a perda. Por isso a métrica do slide 10 começa por uma linha de base.</p></div></section>
+
+<section class="slide"><div class="in">
+<h2>A solução: a IA pergunta, a pessoa decide</h2>
+<div class="flow"><div><b>Relato</b><p>Texto livre, como no WhatsApp</p></div><div><b>Regras</b><p>Categoria, campos obrigatórios, completude, dados pessoais mascarados</p></div><div><b>IA</b><p>Pergunta o que falta, resume e redige o caso e a resposta</p></div><div><b>Pessoa</b><p>Valida e envia à fila</p></div></div>
+<p class="big">A IA não decide a causa. Se os dados não explicam, ela diz que não sabe.</p></div></section>
+
+<section class="slide dark"><div class="in">
+<h2>Demonstração: do “não apareceu” ao caso reproduzível</h2>
+<div class="cols c2">
+<div class="card" style="border-top-color:#c44"><b>Antes</b><p class="mono">“Minha venda não apareceu e o comprador diz que usou meu link.”</p></div>
+<div class="card"><b>Depois (exemplo fictício)</b><p class="mono">Link e comissão · completude 100%<br>Canal: Instagram · Aparelho: iPhone<br>Passos: abrir o link no mesmo canal, comprar em homologação, conferir a origem.<br>Hipóteses a verificar: navegador embutido, cookies do Safari.</p></div></div>
+<p>Teste no protótipo: <b class="lime">[LINK]</b>. Há estados de carregamento, erro, alerta e sucesso, e uma fila com busca e filtro.</p>
+<p class="note">Dados fictícios e IA simulada: nada aqui é resultado real da YouShop.</p></div></section>
+
+<section class="slide"><div class="in">
+<h2>Como funciona e o que é real em cada fase</h2>
+<div class="cols">
+<div class="card"><b>Protótipo (hoje)</b><p>Regras no navegador, textos da IA simulados, dados fictícios. Sem integração.</p></div>
+<div class="card"><b>MVP (próximo passo)</b><p>Um modelo de linguagem chamado por um servidor, só para casos de creators, sempre com revisão humana.</p></div>
+<div class="card"><b>Produção</b><p>Integração com a ferramenta de atendimento, revisão de LGPD e monitoramento de erros da IA.</p></div></div>
+<p><b>Entra:</b> relato em texto e respostas às perguntas. <b>Sai:</b> caso estruturado, hipóteses e rascunho de resposta.</p></div></section>
+
+<section class="slide"><div class="in">
+<h2>Ideias que considerei e descartei</h2>
+<div class="cols c2">
+<div class="card"><b>Auditor de links (LinkGuard)</b><p>Um verificador externo não enxerga a atribuição interna nem o navegador do comprador, onde a perda acontece. Não achei evidência de que seja um problema na YouShop.</p></div>
+<div class="card"><b>Explicar por que a venda não contou</b><p>Tema já muito explorado e depende de dados internos que não tenho.</p></div>
+<div class="card"><b>IA para conciliar comissões</b><p>Dados financeiros sensíveis, e grande parte da conferência é regra simples, sem precisar de IA.</p></div>
+<div class="card"><b>Chatbot de onboarding de creators</b><p>Solução comum no mercado, com pouca diferenciação.</p></div></div></div></section>
+
+<section class="slide"><div class="in">
+<h2>Qual número muda: reperguntas por caso</h2>
+<ul><li><b>Principal:</b> quantas perguntas o time precisa refazer até ter o caso completo.</li>
+<li><b>Apoio:</b> % de casos completos na primeira abertura; tempo até a primeira ação do QA ou Dev; casos reabertos.</li>
+<li><b>Como medir:</b> duas semanas de linha de base, depois piloto com uma equipe.</li></ul>
+<p class="note">Não proponho metas agora: sem a linha de base, qualquer percentual seria invenção.</p></div></section>
+
+<section class="slide dark"><div class="in">
+<h2>Limites e cuidados éticos</h2>
+<div class="cols">
+<div class="card"><b>A IA pode errar</b><p>Hipóteses são pontos a verificar. Uma pessoa valida antes de qualquer envio.</p></div>
+<div class="card"><b>Privacidade (LGPD)</b><p>Mascarar e-mail, CPF e telefone antes da IA e coletar só o necessário. Revisão jurídica antes de produção.</p></div>
+<div class="card"><b>Transparência e inclusão</b><p>O creator sabe que fala com uma IA. Linguagem simples, para quem está começando.</p></div></div>
+<p>O protótipo é uma simulação: não prova que a solução funciona na YouShop. O piloto com linha de base é que mostraria isso.</p></div></section>
+</body></html>
